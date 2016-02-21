@@ -32,10 +32,10 @@ Port forwarding
 The Vagrant vm is configured to forward port 8124 by default. So you can start a Jekyll server like so:
 
 ```
-jekyll server --watch -P 8124
+jekyll server --watch -P 8124 -H 0.0.0.0 --incremental
 ```
 
-And then navigate to localhost:8124 on your host box.
+Note that you need to set host to 0.0.0.0 to access ```localhost:8124``` outside the VM. And then navigate to localhost:8124 on your host box.
 
 Note on SSH-forwarding
 ---------------------
