@@ -8,3 +8,9 @@ Vagrant::Config.run do |config|
 
   config.ssh.forward_agent = true
 end
+
+
+# Share folder between host and vm.
+Vagrant.configure("2") do |config|
+  config.vm.synced_folder "../blog", "/blog"
+end
